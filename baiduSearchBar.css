@@ -1,0 +1,30 @@
+*{margin: 0;padding: 0;box-sizing: border-box}
+ul,ol{list-style: none}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+body{border:1px solid red;height: 100vh;display: flex;justify-content: center;align-items: center}
+
+.wrapper{position: relative}
+
+.inputwrapper{display: inline-block;position: relative;float: left;}
+.inputwrapper>input{width: 538px;line-height: 42px;font-size: 16px;height: 42px;padding-left: 8px;
+    border-style: none ;border:1px solid rgb(204, 204,204)}
+.inputwrapper>input:focus{outline: none;border-color:rgb(51,136,255) }
+.inputwrapper .icons{position: absolute;top: 0;right: 0;height: 100%;display: flex;justify-content: center;
+    align-items: center;margin-right: 10px;color:rgb(204, 204,204); }
+.icons >svg{width: 25px;height: 25px;fill: rgb(204, 204,204);}
+.icons >svg:hover{fill:rgb(51,136,255);cursor: pointer; }
+.icons >.splitLine{border-left: 1px solid;width: 0;height: 18px;margin: 0 8px;}
+
+.wrapper>button{float: left;line-height: 42px;background:rgb(51,136,255);border: none;color: #fff;padding: 0 20px;font-size: 16px; }
+.wrapper>button:hover{ box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);background: #3781F0;}
+
+.suggestion{position: absolute;top: 100%;left: 0;display: none;}
+.suggestion.active{display: block}
+
+

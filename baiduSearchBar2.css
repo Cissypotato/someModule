@@ -1,0 +1,31 @@
+*{margin: 0;padding: 0;box-sizing: border-box}
+ul,ol{list-style: none}
+.clearfix::after{content: "";display: block;clear: both;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+body{height: 100vh;border: 1px solid red;display: flex;justify-content: center;align-items: center}
+
+
+.wrapper{display: flex;position:relative;}
+
+.wrapper .inputWrap{width: 538px;height: 42px;border: 1px solid rgb(204, 204,204);line-height: 42px;display: flex;}
+.wrapper .inputWrap.active{border: 1px solid rgb(51,136,255);}
+.wrapper .inputWrap>input{margin-left: 8px;font-size: 20px;flex-grow: 1;border: none;}
+.wrapper .inputWrap>input:focus{outline: none}
+.wrapper .inputWrap>.littleIcon{float: right;line-height: 40px;height: 40px;display: flex;justify-content: center;
+    align-items: center;margin-right: 10px; }
+.wrapper .inputWrap>.littleIcon>span{display: inline-block;line-height: 40px;height: 40px;}
+.wrapper .inputWrap>.littleIcon>.splitLine{height: 20px;border-right: 1px solid rgb(204, 204,204);width: 1PX;margin: 0 8px;}
+.wrapper .inputWrap>.littleIcon>svg{width:25px;height: 25px;fill:rgb(204, 204,204); }
+.wrapper .inputWrap>.littleIcon>svg:hover{fill:rgb(51,136,255) }
+
+.wrapper>button{float: left;line-height: 42px;background:rgb(51,136,255);border: none;color: #fff;padding: 0 20px;font-size: 16px; }
+.wrapper>button:hover{ box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);background: #3781F0;}
+
+.suggestion{position: absolute;left: 0;top: 100%;display: none}
+.suggestion.active{display: none}
