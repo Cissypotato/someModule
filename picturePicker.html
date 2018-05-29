@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        *{margin: 0;padding: 0;}
+        body{height: 100vh;display: flex;justify-content: center;align-items: center;}
+
+        .wrapper{text-align: center}
+        .wrapper>p{margin: 20px;color: #666}
+        .picturePicker{border: 3px solid pink;width:120px;position: relative;height: 120px;border-radius: 50%;overflow: hidden;
+            display: flex;justify-content: center;align-items: center;margin: 0 auto;
+            box-shadow: inset 0px 0px 7px 2px rgba(230,94,76,1);}
+
+
+        .picturePicker>img{max-width: 100%;max-height: 100%;}
+        .picturePicker>.mask{position: absolute;background: rgba(0, 0, 0,0.2);width: 100%;height: 100%;color: #fff;
+            display: none;justify-content: center;align-items: center;}
+        .picturePicker:hover .mask{display: flex;}
+
+        .picturePicker>input[type=file]{width: 100%;height: 100%;background: pink;top: 0;left: 0;opacity: 0;
+            position: absolute;cursor: pointer
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="picturePicker">
+            <img src="images/avatar.jpg" >
+            <div class="mask">编辑</div>
+            <input type="file">  
+        </div>
+        <p>点击头像编辑</p>
+    </div>
+    
+</body>
+</html>
