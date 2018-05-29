@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{height: 100vh;display: flex;justify-content: center;align-items: center;}
+
+        .cButton{box-sizing: border-box;font-size: 14px;height: 36px;padding: 0 16px;border: none;background: #eee;
+            transition: all 0.5s;position: relative;overflow: hidden;z-index: 0}
+        .cButton:hover{background: #ccc;}
+        .cButton:focus{outline: none}
+
+        .cButton .circle{width: 10px;height: 10px;border-radius: 50%;background:#bbb;position: absolute; top: 50%;left: 50%;
+            margin-left:-5px;margin-top: -5px;transition:transform 1s;visibility: hidden;z-index: -1;
+        }
+        .cButton .circle.active{transform: scale(10);visibility: visible;}
+    
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <button id="cButton" class="cButton">
+            
+            <span class="circle"></span>
+            点我啊
+        </button>
+        
+    </div>
+    <script>
+    cButton.onclick=function(){
+        cButton.querySelector('.circle').classList.add('active')
+    }
+    cButton.querySelector('.circle').addEventListener('transitionend',function(){
+        cButton.querySelector('.circle').classList.remove('active')  
+    })
+    
+    </script>
+</body>
+</html>
